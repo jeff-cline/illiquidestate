@@ -6,9 +6,12 @@ import { createClient } from "@supabase/supabase-js";
 import type { Lead, LeadInput } from "./index";
 
 function env(name: string): string {
-  const v = process.env[name];
-  if (!v) throw new Error(`Missing required env var ${name}`);
-  return v;
+  const raw = process.env[name] ?? "";
+  const cleaned = raw.replace(/\s+#.*$/, "").trim();
+  if (!cleaned || cleaned.includes("YOUR_PROJECT_REF")) {
+    throw new Error(`Missing required env var ${name}`);
+  }
+  return cleaned;
 }
 
 function serverClient() {

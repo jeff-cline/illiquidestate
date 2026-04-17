@@ -35,7 +35,13 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: validation }, { status: 400 });
   }
 
-  const lead = await insertLead(body);
+  let lead;
+  try {
+    lead = await insertLead(body);
+  } catch (err) {
+    console.error("Lead insert failed", err);
+    return NextResponse.json({ error: "Lead backend not configured" }, { status: 503 });
+  }
 
   try {
     const meta = HOOK_META[body.hookId];
