@@ -17,7 +17,7 @@ export async function sendPlaybookEmail(args: {
   const from = process.env.EMAIL_FROM || "Illiquid Estate <hello@illiquidestate.com>";
   const replyTo = process.env.EMAIL_REPLY_TO || "jeff.cline@me.com";
 
-  const subject = `${args.playbookName} — your copy inside`;
+  const subject = `${args.playbookName} - your copy inside`;
   const html = buildHtml(args);
   const text = buildText(args);
 
