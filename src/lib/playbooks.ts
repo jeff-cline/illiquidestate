@@ -4,7 +4,7 @@
  * Replace with real signed URLs when the playbook PDFs are finalized.
  */
 
-import type { HookId } from "@illiquidestate/crm";
+import type { HookId } from "@/lib/crm";
 
 export interface Deliverable {
   title: string;
@@ -14,7 +14,7 @@ export interface Deliverable {
 }
 
 export const DELIVERABLES: Record<HookId, Deliverable> = {
-  M1: {
+  M1_silent_tax: {
     title: "The Silent Tax Playbook",
     url: "https://illiquidestate.com/assets/playbooks/silent-tax-playbook.pdf",
     subject: "The Silent Tax Playbook — inside",
@@ -25,7 +25,7 @@ export const DELIVERABLES: Record<HookId, Deliverable> = {
       "— Jeff Cline, CEO\n" +
       "Illiquid Estate · 5 Cowboys Way, Frisco, TX 75034 · 972-800-6670",
   },
-  E1: {
+  E1_post_exit: {
     title: "Founder's Post-Exit Playbook",
     url: "https://illiquidestate.com/assets/playbooks/post-exit-playbook.pdf",
     subject: "Founder's Post-Exit Playbook — inside",
@@ -36,7 +36,7 @@ export const DELIVERABLES: Record<HookId, Deliverable> = {
       "— Jeff Cline, CEO\n" +
       "Illiquid Estate · 5 Cowboys Way, Frisco, TX 75034 · 972-800-6670",
   },
-  O1: {
+  O1_illiquid_estate: {
     title: "The Illiquid Estate Playbook",
     url: "https://illiquidestate.com/assets/playbooks/illiquid-estate-playbook.pdf",
     subject: "Your Illiquid Estate Report + playbook — inside",
@@ -47,7 +47,7 @@ export const DELIVERABLES: Record<HookId, Deliverable> = {
       "— Jeff Cline, CEO\n" +
       "Illiquid Estate · 5 Cowboys Way, Frisco, TX 75034 · 972-800-6670",
   },
-  X1: {
+  X1_preipo_clock: {
     title: "Pre-IPO 24-Month Playbook",
     url: "https://illiquidestate.com/assets/playbooks/preipo-playbook.pdf",
     subject: "Your Pre-IPO timeline + playbook — inside",
@@ -58,7 +58,7 @@ export const DELIVERABLES: Record<HookId, Deliverable> = {
       "— Jeff Cline, CEO\n" +
       "Illiquid Estate · 5 Cowboys Way, Frisco, TX 75034 · 972-800-6670",
   },
-  G1: {
+  G1_family_office_audit: {
     title: "Family Office Insurance Audit",
     url: "https://illiquidestate.com/assets/playbooks/family-office-audit.pdf",
     subject: "Family Office Insurance Audit — 24-point checklist inside",
@@ -69,7 +69,7 @@ export const DELIVERABLES: Record<HookId, Deliverable> = {
       "— Jeff Cline, CEO\n" +
       "Illiquid Estate · 5 Cowboys Way, Frisco, TX 75034 · 972-800-6670",
   },
-  C1: {
+  C1_charitable_leak: {
     title: "The Philanthropist's Life-Insurance Playbook",
     url: "https://illiquidestate.com/assets/playbooks/charitable-playbook.pdf",
     subject: "Your Charitable Leak report + playbook — inside",
